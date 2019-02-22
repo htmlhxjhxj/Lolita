@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>event</title>
+  <style>
+    body{
+      margin: 0;padding: 0;
+    }
+  .demo{
+    width: 200px;height: 200px;background: tomato;
+  }
+  </style>
+</head>
+<body>
+  <div class="demo"></div>
+  <script>
+    let demo=document.getElementsByClassName('demo')[0];
+    demo.addEventListener('touchstart',()=>{
+      console.log('触摸开始！')
+    });
+    demo.addEventListener('touchmove',()=>{
+      console.log('触摸移动！')
+    });
+    // 触摸离开时触发
+    demo.addEventListener('touchend',()=>{
+      console.log('移动开始！')
+    });
+   
+  </script>
+</body>
+</html>
